@@ -1,6 +1,6 @@
 ## Formation "Introduction à R"
 
-[Link](https://github.com/lrouviere/lrouviere.github.io/pres_R.pdf)
+[Link](https://lrouviere.github.io/pres_R.pdf)
 
 ### Document de cours
 
