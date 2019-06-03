@@ -4,6 +4,15 @@
 
 ### Document de cours
 
+- [slides](https://lrouviere.github.io/pres_R.pdf)
+- [slides au format rapport](https://lrouviere.github.io/pres_R.pdf)
+
+### Exercices, notebook
+
+
+### Corrections
+
+
 Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
 
 ```markdown
