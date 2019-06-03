@@ -1,6 +1,3 @@
-## Formation "Introduction à R"
-
-[Link](https://lrouviere.github.io/pres_R.pdf)
 
 ### Document de cours
 
@@ -11,6 +8,9 @@
 
 
 ### Corrections
+
+
+
 
 
 Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
