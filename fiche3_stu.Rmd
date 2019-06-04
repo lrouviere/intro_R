@@ -1,0 +1,443 @@
+---
+title: "Manipuler les données dans le tidyverse"
+output: html_notebook
+---
+
+<style type="text/css">
+
+body{ /* Normal  */
+      font-size: 12px;
+  }
+td {  /* Table  */
+  font-size: 12px;
+}
+h1.title {
+  font-size: 48px;
+  color: DarkRed;
+}
+h1 { /* Header 1 */
+  font-size: 35px;
+  color: DarkBlue;
+}
+h2 { /* Header 2 */
+    font-size: 28px;
+  color: DarkBlue;
+}
+h3 { /* Header 3 */
+  font-size: 24px;
+  font-family: "Times New Roman", Times, serif;
+  color: DarkBlue;
+}
+code.r{ /* Code block */
+    font-size: 12px;
+}
+pre { /* Code block - determines code spacing between lines */
+    font-size: 14px;
+}
+</style>
+
+
+Les données sont souvent le point de départ d'une étude statistique. Ces données sont généralement d'abord stockées dans des fichiers (txt, xls, csv) et une des premières étapes est d'amener ces données dans **R** et de les affecter à un objet de type **dataframe**. Il est par conséquent très important connaitre et maitriser les opérations qui permettent de réaliser ces importations. Nous présentons tout d'abord quelques fonctions qui permettent de faire ces importations avant de présenter le package **dplyr** qui offre une syntaxe claire pour manipuler des données (correctement importées).
+
+
+
+# 1. Importer des données
+
+Les fonction **read.table** et **read.csv** sont les fonctions standards de *R* pour importer des données à partir  de fichiers *.txt* ou *.csv*.
+
+
+```{r}
+path <- file.path(getwd(), "piscines.csv") #first: directory, second: file
+piscines <- read.csv(path)
+class(piscines)
+summary(piscines)
+```
+
+Il existe plusieurs **options importantes** dans **read.csv**, notamment
+
+* **sep** : le caractère de séparation (espace, virgule...)
+* **dec** : le caractère pour le séparateur décimal (vigule, point...)
+* **header** : logique pour indiquer si le nom des variables est spécifié à la première ligne du fichier
+* **row.names** : vecteurs des identifiants (si besoin)
+* **na.strings** : vecteur de caractères pour repérer les données manquantes.
+* ...
+
+### Exercice 1
+
+1. Importer les données qui se trouvent dans le fichier *mydata.csv*.
+
+
+2. Importer **correctement** les données qui se trouvent dans le fichier *mydata.csv* (utiliser *sep*, *dec* et *row.names*).
+
+
+3. Importer les données qui se trouvent dans le fichier *mydata2.csv*.
+
+
+4. Ce fichier contient des données manquantes (identifiées par un point). A l'aide de  **na.strings**, refaire l'importation en identifiant les données manquantes.
+
+
+5. Changer les **levels** de la variable *sex* : On utilisera **woman** and **man** (on pourra utiliser la fonction **levels**).
+
+
+
+Le package **readr** du tydiverse permet d'importer des données au format **tibble**. Il contient les fonctions *read_csv* et *read_table*. L'utilisation de ces fonctions est proche de *read.csv* et *read.table*. On peut également utiliser le boutton **Import Dataset** de `Rstudio` pour importer avec `readr`.
+
+
+### Exercice 2 (Assembler des tables de données)
+
+On considère les 3 jeux de données suivants, au format **tibble** :
+
+```{r message=FALSE, warning=FALSE}
+library(tidyverse)
+df1 <- tibble(name=c("Mary","Peter","John","July"),age=c(18,25,21,43))
+df2 <- tibble(name=c("Zac","Julian"),age=c(23,48))
+df3 <- tibble(size=c(154,178,182,134,142),name1=c("Peter","Mary","July","John","stef"))
+df1
+df2
+df3
+```
+
+On souhaite assembler ces tables en utilisant les **fonctions de jointure** du `tidyverse` (*left_join*, *full_join* par exemple). On pourra consulter la cheat sheet **Data transformation with dplyr** (help+cheatsheets+...)
+
+1. Assembler **df1** avec **df2** en utilisant *bind_rows* et calculer la moyenne de la variable **age**. On appellera **df** cette nouvelle table.
+
+
+2. Assembler **df** avec **df3** en utilisant **full_join**.
+
+
+3. Faire la même chose avec **inner_join**.
+
+4. Expliquer les différences entre **full_join** et **inner_join**.
+
+
+### Exercice 3
+
+Importer les données du fichier *piscine.csv* avec le package **readr** (on pourra utiliser **read_csv** ou le boutton **Import Dataset**).
+
+
+
+# 2. dplyr package
+
+**dplyr** est un package du `tidyverse` qui permet de faciliter la manipulation des données, notamment en terme de **syntaxe**. Il propose une **syntaxe claire** (basée sur une `grammaire`) pour manipuler les données. On pourra trouver des informations [ici](https://spark.rstudio.com/dplyr.html) ou sur la [cheatsheet](https://www.rstudio.com/wp-content/uploads/2015/02/data-wrangling-cheatsheet.pdf).
+
+
+Nous avons vu quelques opérations standards pour manipuler les données. Par exemple, on peut obtenir les **Longitude** et **Latitude** des piscines ayant une *Longitude* supérieure à 153 avec
+
+```{r}
+piscines[piscines$Longitude>153,c("Longitude","Latitude")]
+```
+
+**dplyr** propose de faire la même chose avec une syntaxe plus claire
+
+```{r message=FALSE, warning=FALSE}
+library(tidyverse) #library(dplyr)
+piscines %>% select(Longitude,Latitude) %>% filter(Longitude>153)
+```
+
+Le code est plus efficace et facile à lire.
+
+**dplyr** propose une `grammaire` dont les principaux `verbes` sont :
+
+* **select()** : selectionner des colonnes (variables)
+* **filter()** :	filter des lignes (individus)
+* **arrange()** :	ordonner des lignes
+* **mutate()** :	créer des nouvelles colonnes (nouvelles variables)
+* **summarise()** :	calculer des résumés numériques (ou résumés statistiques)
+* **group\_by()**	: effectuer des opérations pour des groupes d'individus
+
+
+
+## 2.1 Le verbe `select()` 
+
+Il permet de sélectionner des variables (colonnes) :
+```{r, eval=FALSE, include=TRUE}
+select(df, VAR1, VAR2, ...)
+```
+
+Par exemple,
+```{r}
+coord <- select(piscines, Latitude, Longitude)
+head(piscines, n=2)
+head(coord, n=2)
+```
+
+On peut utiliser les **helper functions** (**begins_with**, **end_with**, **contains**, **matches**) pour des sélections plus précises basées sur le nom des variables.
+
+```{r}
+coord <- select(piscines, ends_with("tude"))
+head(coord, n=2)
+```
+
+## 2.2 Le verbe `mutate()` 
+
+Il permet de créer des nouvelles variables
+
+```{r, eval=FALSE, include=TRUE}
+mutate(df, NEW.VAR = expression(VAR1, VAR2, ...))
+```
+Par exemple
+
+```{r}
+df <- mutate(piscines, phrase=paste("Swimming pool", Name, "is located at the address", Address))
+select(df,phrase)
+```
+
+On peut également créer plusieurs variables avec un seul **mutate** :
+
+```{r}
+mutate(piscines,
+       phrase = paste("Swimming pool", Name, "is located at the address", Address),
+       unused = Longitude + Latitude
+)
+```
+
+
+## 2.3 Le verbe `filter()` 
+
+Il permet de sélectionner des individus (lignes) :
+```{r, eval=FALSE, include=TRUE}
+filter(df, TEST)
+```
+
+Par exemple
+```{r}
+p1 <- filter(piscines, Longitude>153.02)
+select(p1,Longitude)
+```
+
+ou (on sélectionne les piscines dont le nom contient **Pool**)
+```{r}
+df <- filter(piscines, !grepl("Pool", Name))
+select(df,Name)
+```
+ou (on sélectionne les piscines avec une longitude plus grande que 153.02 **ou** une latitude plus petite que -27.488)
+
+```{r}
+p2 <- filter(piscines, Longitude>153.02 | Latitude < -27.488)
+p2 <- select(p2, Longitude, Latitude)
+p2
+```
+
+On peut également utiliser la fonction **slice** pour choisir des individus à partir de leurs indivces :
+```{r}
+piscines %>% slice(5:8)
+```
+
+
+## 2.4 Le verbe `arrange()` 
+
+Il permet d'ordonner les individus en fonction d'une variable
+
+```{r, eval=FALSE, include=TRUE}
+arrange(df, VAR) #increasing sort
+```
+ou
+```{r, eval=FALSE, include=TRUE}
+arrange(df, desc(VAR)) #decreasing sort
+```
+
+Par exemple
+```{r}
+arrange(piscines, Longitude)
+```
+ou
+```{r}
+arrange(piscines, desc(Longitude))
+```
+
+##  2.5 Le verbe `summarise()` 
+
+Un peu plus compliqué... Il permet de créer des nouveaux jeux de données qui contiennet des résumés statistiques du jeu de données initial :
+
+1. `mean()` ;
+1. `median()` ;
+1. `IQR()` ;
+1. `var()`.
+
+Par exemple
+```{r}
+summarise(piscines,
+          mean_long = mean(Longitude),
+          med_lat = median(Latitude),
+          min_lat = min(Latitude),
+          sum_long = sum(Longitude)
+)
+```
+
+On peut aussi utiliser **summarise_all**, **summarise_at** (`help(summarise_all)`).
+
+**dplyr** contient également les fonction suivantes (souvent utilisées en statistique) :
+
+1. `n()` : nombre de lignes (individus d'un jeu de données).
+1. `n_distinct()` : nombre d'éléments disctints dans un vecteur.
+1. `fisrt()` et `last()` : premier et dernier élément d'un vecteur.
+
+Par exemple, on obtient le nombre de piscines dans le jeu de données, et la longitude de la dernière piscine avec
+
+```{r}
+summarise(piscines,n())
+summarise(piscines,last(Longitude))
+```
+
+
+
+## 2.6 Opérations sur les verbes
+
+Il est bien entendu possible de concaténer les verbes : de les utiliser en chaine (c'est même recommandé). Par exemple, on peut obtenir les noms de piscines avec la plus haute longitude avec
+
+```{r}
+p1 <- arrange(piscines,desc(Longitude)) #decreasing sort
+summarise(p1,first(Name)) #extract the first
+```
+
+L'opérateur **pipe**  **%>%** permet d'écrire ce chainage de verbes avec une syntaxe plus lisible :
+
+```{r}
+piscines %>% arrange(desc(Longitude)) %>% summarise(first(Name))
+```
+
+## 2.7 Regrouper des données avec 'Group_by' 
+
+**group_by** permet d'appliquer une ou des opérations à des groupes de données (ou d'individus). Par exemple, imaginons que l'on souhaite calculer les longitudes moyennes des piscines scindées en 2 groupes : faible et large latitude. On créé d'abord une variable **lat_disc** qui permet d'identifier les latitudes (faible ou large) :
+
+```{r}
+lat_mean <- piscines %>% summarise(mean(Latitude))
+pisc1 <- piscines %>% mutate(lat_dis=factor(Latitude>as.numeric(lat_mean)))
+levels(pisc1$lat_dis) <- c("Low","High")
+```
+
+Il reste maintenant à utiliser **group_by** pour obtenir les longitudes moyennes des 2 groupes :
+
+```{r}
+pisc1 %>% group_by(lat_dis) %>% summarise(mean_long=mean(Longitude))
+```
+
+
+### Exercice 3
+
+On considère le jeu de données **iris**
+
+```{r}
+data(iris)
+```
+
+Répondre aux questions suivantes en utilisant les verbes **dplyr** :
+
+1. Sélectionner les variables **Petal.Width** et **Species**.
+
+2. Construire une table qui contient uniquement les iris d'espèce  **Versicolor** ou **Virginica**  (on pourra utiliser le symbole | pour la condition **or**).
+
+3. Calculer the nombre d'iris  **setosa** en utilisant **summarise**.
+
+
+4. Calculer la moyenne de la variable *Petal Width* pour les iris de l'espèce versicolor.
+
+5. Ajouter dans le jeu de données la variable **Sum_Petal** qui correspond à la somme de **Petal.Width** et **Sepal.Width**.
+
+
+6. Calculer la moyenne de la variance de la variable **Sepal.Length** pour chaque espèce (on pourra utiliser **group_by**).
+
+### Exercice 4
+
+On considère la table **hflights** qui contient des informations sur les vols au départ des aéroports Houston airports IAH (George Bush Intercontinental) et HOU (Houston Hobby):
+
+```{r}
+library(hflights)
+hflights <- tbl_df(hflights)
+```
+
+La variable `Unique Carrier` renseigne sur la compagnie du vol. On recode cette variable afin que la compagnie soit plus explicite :
+```{r}
+lut1 <- c("AA" = "American", "AS" = "Alaska", "B6" = "JetBlue", "CO" = "Continental",
+         "DL" = "Delta", "OO" = "SkyWest", "UA" = "United", "US" = "US_Airways", 
+         "WN" = "Southwest", "EV" = "Atlantic_Southeast", "F9" = "Frontier", 
+         "FL" = "AirTran", "MQ" = "American_Eagle", "XE" = "ExpressJet", "YV" = "Mesa")
+```
+
+On fait de même pour la variable `CancellationCode` :
+```{r}
+lut2 <- c("A" = "carrier", "B" = "weather", "C" = "FFA", "D" = "security", "E" = "not cancelled")
+```
+
+On effectue maintenant les changements dans la table pour obtenir une nouvelle version de **hflights** :
+
+```{r}
+hflights1 <- hflights
+hflights1$UniqueCarrier <- lut1[hflights1$UniqueCarrier]
+hflights1$CancellationCode[hflights1$CancellationCode==""] <- "Z"
+hflights1$CancellationCode <- lut2[hflights1$CancellationCode]
+```
+
+A partir de maintenant, on travaille avec **hflights1**.
+
+
+1. Sélectionner les variables qui se situent **entre Origin et Cancelled** de différentes façons.
+
+
+2. Sélectionner les variables `DepTime`, `ArrTime`, `ActualElapsedTime`, `AirTime`, `ArrDelay` and `DepDelay`. On pourra remarquer que toutes ces variables contiennent les chaines de caractère `Time` et `Delay` et utiliser la *helper function* **contains()**.
+
+3. Ajouter une variable **ActualGroundTime** qui correspond à *ActualElapsedTime* moins *AirTime*.
+
+4. Ajouter la **AverageSpeed** (`=Distance/AirTime`) et ordonner la table selon les valeurs décroissantes de cette variable.
+
+5. Sélectionner les vols à destination de `JFK`.
+
+6. Calculer le nombre de vols à destination de `JFK`.
+
+7. Créer un résumé de `hflights1` qui contient :
+    + `n` : le nombre total de vols ;
+    + `n_dest`: le nombre total de destinations ;
+    + `n_carrier` : le nombre total de compagnies.
+    
+    
+
+8. Créer un résumé de `hflights1` qui contient, pour les vols de la compagnie **American**
+    + le nombre total de vols ;
+    + le nombre total de vols annulés ;
+    + la valeur moyenne de `ArrDelay` (attention à la gestion des `NA`...).
+    
+
+9. Calculer pour chaque compagnie :
+    + le nombre total de vols ;
+    + La valeur moyenne de **AirTime**.
+    
+
+10. Ordonner les compagnies en fonction des retards moyens au départ.
+
+
+### Exercice 5
+
+On considère le données sur les résultats de tennis dans les tournois du grand chelem en 2013. Les données, ainsi que le descriptif des variables, se trouvent à l'adresse [https://archive.ics.uci.edu/ml/datasets/Tennis+Major+Tournament+Match+Statistics](https://archive.ics.uci.edu/ml/datasets/Tennis+Major+Tournament+Match+Statistics).
+
+
+On s'intéresse d'abord au tounoi masculin de Roland Garros. On répondra aux questions à l'aide des verbes **dplyr**.
+
+1. Importer les données.
+
+2. Afficher le nom des adversaires de Roger Federer.
+
+
+3. Afficher le nom des demi-finalistes (ceux qui ont atteint le 6ème tour)
+
+
+4. Combien y a t-il eu de points disputés en moyenne par match ? Il faudra penser à ajouter dans la table une variable correspondant au nombre de points de chaque match (verbe `mutate`).
+
+5. Combien y a t-il eu d'aces par match en moyenne ?
+
+
+6. Combien y a t-il eu d'aces par match en moyenne à chaque tour ?
+
+7. Combien y a t-il eu de doubles fautes au total dans le tournoi (attention aux données manquantes) (taper **help(sum)** pour voir comment les gérer) ?
+
+8. Importer les données pour le tournoi Wimbledon homme 2013.
+
+9. Concaténer les tables en ajoutant une variable permettant d'identifier le tournoi. On pourra utiliser **bind_rows** abev l'option **.id**.
+
+
+10. Afficher les matchs de Federer pour chaque tournoi.
+
+
+11. Comparer les nombres d'aces par matchs à chaque tours pour les tournois de Roland Garros et Wimbledon.
+
+
+
