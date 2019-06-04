@@ -24,4 +24,3 @@
 - [mydata2.csv](https://lrouviere.github.io/mydata2.csv)
 - [piscines.csv](https://lrouviere.github.io/piscines.csv)
 
-### Compléments
