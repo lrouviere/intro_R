@@ -16,7 +16,12 @@
 - [Fiche 2](https://lrouviere.github.io/fiche2_cor.html)
 
 
-### Compléments
+### Jeux de données
+
+- [mydata1.csv](https://lrouviere.github.io/mydata1.csv)
+- [mydata2.csv](https://lrouviere.github.io/mydata2.csv)
+- [piscines.csv](https://lrouviere.github.io/piscines.csv)
+
 
 Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
 
