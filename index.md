@@ -6,6 +6,7 @@
 
 ### Exercices, notebook
 
+- [Fiche1](https://lrouviere.github.io/fiche1.rmd) : Environnement RStudio, Rmarkdown et Packages.
 
 ### Corrections
 
