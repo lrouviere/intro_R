@@ -6,9 +6,14 @@
 
 ### Exercices, notebook
 
-- [Fiche1](https://lrouviere.github.io/fiche1.Rmd) : Environnement RStudio, Rmarkdown et Packages.
+- [Fiche 1](https://lrouviere.github.io/fiche1.Rmd) : Environnement RStudio, Rmarkdown et Packages.
+- [Fiche 2](https://lrouviere.github.io/fiche2.Rmd) : Les objets R.
+
 
 ### Corrections
+
+- [Fiche 1](https://lrouviere.github.io/fiche1.nb.html)
+- [Fiche 2](https://lrouviere.github.io/fiche2_cor.html)
 
 
 ### Compléments
