@@ -10,7 +10,7 @@
 - [Fiche 2](https://lrouviere.github.io/fiche2_stu.Rmd) : Les objets R.
 - [Fiche 3](https://lrouviere.github.io/fiche3_stu.Rmd) : Manipuler les données dans le tidyverse.
 - [Fiche 4](https://lrouviere.github.io/fiche4_stu.Rmd) : Visualiser les données (approche classique et ggplot2)
-  - [Challenge 1](https://lrouviere.github.io/challenge1.pdf)
+  - graphes pour éditer la fiche : [Challenge 1](https://lrouviere.github.io/challenge1.pdf), [Challenge 2](https://lrouviere.github.io/challenge2.pdf), [Challenge 3](https://lrouviere.github.io/challenge3.pdf)
 
 
 ### Corrections
