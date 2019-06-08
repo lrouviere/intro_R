@@ -1,5 +1,5 @@
 
-### Document de cours
+### Documents de cours
 
 - [slides](https://lrouviere.github.io/pres_R.pdf)
 - [slides au format rapport](https://lrouviere.github.io/pres_R_article.pdf)
