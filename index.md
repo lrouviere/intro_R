@@ -12,7 +12,7 @@
 - [Fiche 4](https://lrouviere.github.io/fiche4_stu.Rmd) : Visualiser les données (approche classique et ggplot2)
   - graphes pour éditer la fiche : [Challenge 1](https://lrouviere.github.io/challenge1.pdf), [Challenge 2](https://lrouviere.github.io/challenge2.pdf), [Challenge 3](https://lrouviere.github.io/challenge3.pdf), [Challenge 4](https://lrouviere.github.io/challenge4.pdf)
 - [Fiche 5](https://lrouviere.github.io/fiche5_stu.Rmd) : Introduction aux cartes leaflet.
-- Fiche 6 : Régression avec R, [Rmd](https://lrouviere.github.io/fiche6_stu.Rmd), [html](https://lrouviere.github.io/fiche6_stu.nb.Rmd)
+- Fiche 6 : Régression avec R, [Rmd](https://lrouviere.github.io/fiche6_stu.Rmd), [html](https://lrouviere.github.io/fiche6_stu.nb.html)
 
 
 ### Corrections
