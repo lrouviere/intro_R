@@ -23,6 +23,8 @@
 - [Fiche 3](https://lrouviere.github.io/fiche3_cor.html)
 - [Fiche 4](https://lrouviere.github.io/fiche4_cor.html)
 - [Fiche 5](https://lrouviere.github.io/fiche5_cor.html)
+- [Fiche 6](https://lrouviere.github.io/fiche6_cor.html)
+
 
 
 
