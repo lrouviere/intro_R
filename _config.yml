@@ -1,3 +1,5 @@
 theme: jekyll-theme-cayman
 title: Introduction à R dans le tidyverse
-description: formation CEPE - Juin 2019 - Laurent Rouvière
+description: Laurent Rouvière
+github:
+  is_project_page: false
