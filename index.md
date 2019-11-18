@@ -1,18 +1,18 @@
 
 ### Documents de cours
 
-- [slides](https://lrouviere.github.io/pres_R.pdf)
-- [slides au format rapport](https://lrouviere.github.io/pres_R_article.pdf)
+- [slides](pres_R.pdf)
+- [slides au format rapport](pres_R_article.pdf)
 
 
 ### Exercices, notebook
 
-- [Fiche 1](https://lrouviere.github.io/fiche1.Rmd) : Environnement RStudio, Rmarkdown et Packages.
-- [Fiche 2](https://lrouviere.github.io/fiche2_stu.Rmd) : Les objets R.
-- [Fiche 3](https://lrouviere.github.io/fiche3_stu.Rmd) : Manipuler les données dans le tidyverse.
-- [Fiche 4](https://lrouviere.github.io/fiche4_stu.Rmd) : Visualiser les données (approche classique et ggplot2)
-  - graphes pour éditer la fiche : [Challenge 1](https://lrouviere.github.io/challenge1.pdf), [Challenge 2](https://lrouviere.github.io/challenge2.pdf), [Challenge 3](https://lrouviere.github.io/challenge3.pdf), [Challenge 4](https://lrouviere.github.io/challenge4.pdf)
-- [Fiche 5](https://lrouviere.github.io/fiche5_stu.Rmd) : Introduction aux cartes leaflet.
+- [Fiche 1](fiche1.Rmd) : Environnement RStudio, Rmarkdown et Packages.
+- [Fiche 2](fiche2_stu.Rmd) : Les objets R.
+- [Fiche 3](fiche3_stu.Rmd) : Manipuler les données dans le tidyverse.
+- [Fiche 4](fiche4_stu.Rmd) : Visualiser les données (approche classique et ggplot2)
+  - graphes pour éditer la fiche : [Challenge 1](challenge1.pdf), [Challenge 2](challenge2.pdf), [Challenge 3](challenge3.pdf), [Challenge 4](challenge4.pdf)
+- [Fiche 5](fiche5_stu.Rmd) : Introduction aux cartes leaflet.
 - Fiche 6 : Régression avec R, [Rmd](https://lrouviere.github.io/fiche6_stu.Rmd), [html](https://lrouviere.github.io/fiche6_stu.nb.html)
 - [Fiche 7](https://lrouviere.github.io/fiche7.nb.html) : Importation de tables SAS sur R
 
