@@ -7,7 +7,7 @@ output: html_notebook
 
 On commencera par créer un répertoire dans lequel on mettra tous les fichiers et projets de la formation. Pour chaque thème, on pourra créer un **nouveau projet** avec Rstudio dans lequel on placera ce fichier. Par défaut, le répertoire de travail se situera dans le répertoire de ce projet. On peut le vérifier avec la commande
 
-```{r}
+```{r,eval}
 getwd()
 ```
 

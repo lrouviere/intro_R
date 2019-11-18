@@ -52,8 +52,14 @@ Le **code R** doit être installé dans des **chunks**. On peut insérer des chu
 
 * la raccourci clavier **Ctrl + Alt + I** (OS X: Cmd + Option + I)
 * la bouton **Insert -> R**
-* en tapant ```{r} and ```.
+* en tapant :
 
+
+```` markdown
+`r ''````{r}
+commandes...
+```
+````
 
 On clique sur *"Preview"* pour visualiser la sortie au format **html**.
 

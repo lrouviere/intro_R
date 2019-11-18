@@ -7,8 +7,8 @@
 
 ### Exercices, notebook
 
-- [Fiche 1](fiche1.Rmd) : Environnement RStudio, Rmarkdown et Packages.
-- [Fiche 2](fiche2_stu.Rmd) : Les objets R.
+- Fiche 1 : Environnement RStudio, Rmarkdown et Packages, [Rmd](fiche1_stu.Rmd), [html](fiche1_stu.nb.html)
+- Fiche 2 : Les objets R, [Rmd](fiche2_stu.Rmd), [html](fiche2_stu.nb.html)
 - [Fiche 3](fiche3_stu.Rmd) : Manipuler les données dans le tidyverse.
 - [Fiche 4](fiche4_stu.Rmd) : Visualiser les données (approche classique et ggplot2)
   - graphes pour éditer la fiche : [Challenge 1](challenge1.pdf), [Challenge 2](challenge2.pdf), [Challenge 3](challenge3.pdf), [Challenge 4](challenge4.pdf)
