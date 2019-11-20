@@ -9,8 +9,8 @@
 
 - Fiche 1 : Environnement RStudio, Rmarkdown et Packages, [Rmd](fiche1.Rmd), [html](fiche1.nb.html)
 - Fiche 2 : Les objets R, [Rmd](fiche2_stu.Rmd), [html](fiche2_stu.nb.html)
-- [Fiche 3](fiche3_stu.Rmd) : Manipuler les données dans le tidyverse.
-- [Fiche 4](fiche4_stu.Rmd) : Visualiser les données (approche classique et ggplot2)
+- Fiche 3 : Manipuler les données dans le tidyverse, [Rmd](fiche3_stu.Rmd), [html](fiche3_stu.nb.html)
+- Fiche 4 : Visualiser les données (approche classique et ggplot2), [Rmd](fiche4_stu.Rmd), [html](fiche4_stu.nb.html)
   - graphes pour éditer la fiche : [Challenge 1](challenge1.pdf), [Challenge 2](challenge2.pdf), [Challenge 3](challenge3.pdf), [Challenge 4](challenge4.pdf)
 - [Fiche 5](fiche5_stu.Rmd) : Introduction aux cartes leaflet.
 - Fiche 6 : Régression avec R, [Rmd](https://lrouviere.github.io/fiche6_stu.Rmd), [html](https://lrouviere.github.io/fiche6_stu.nb.html)
