@@ -13,8 +13,8 @@
 - Fiche 4 : Visualiser les données (approche classique et ggplot2), [Rmd](fiche4_stu.Rmd), [html](fiche4_stu.nb.html)
   - graphes pour éditer la fiche : [Challenge 1](challenge1.pdf), [Challenge 2](challenge2.pdf), [Challenge 3](challenge3.pdf), [Challenge 4](challenge4.pdf)
 - [Fiche 5](fiche5_stu.Rmd) : Introduction aux cartes leaflet.
-- Fiche 6 : Régression avec R, [Rmd](https://lrouviere.github.io/fiche6_stu.Rmd), [html](https://lrouviere.github.io/fiche6_stu.nb.html)
-- [Fiche 7](https://lrouviere.github.io/fiche7.nb.html) : Importation de tables SAS sur R
+- Fiche 6 : Régression avec R, [Rmd](fiche6_stu.Rmd), [html](fiche6_stu.nb.html)
+- [Fiche 7](fiche7.nb.html) : Importation de tables SAS sur R
 
 
 ### Corrections
@@ -33,14 +33,14 @@
 ### Jeux de données
 
 - Fiche 3
-  - [mydata.csv](https://lrouviere.github.io/mydata.csv)
-  - [mydata2.csv](https://lrouviere.github.io/mydata2.csv)
-  - [piscines.csv](https://lrouviere.github.io/piscines.csv)
+  - [mydata.csv](mydata.csv)
+  - [mydata2.csv](mydata2.csv)
+  - [piscines.csv](piscines.csv)
   
 - Fiche 4
-  - [ozone.txt](https://lrouviere.github.io/ozone.txt)
-  - [taches_solaires.csv](https://lrouviere.github.io/taches_solaires.csv)
+  - [ozone.txt](ozone.txt)
+  - [taches_solaires.csv](taches_solaires.csv)
   
 - Fiche 7
-  - [panne.sas7bdat](https://lrouviere.github.io/panne.sas7bdat)
+  - [panne.sas7bdat](panne.sas7bdat)
 
