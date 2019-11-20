@@ -2,7 +2,7 @@
 ### Documents de cours
 
 - [slides](pres_R.pdf)
-- [slides au format rapport](pres_R_article.pdf)
+- [slides au format rapport](pres_R_article1.pdf)
 
 
 ### Exercices, notebook
