@@ -19,8 +19,8 @@
 
 ### Corrections
 
-- [Fiche 1](https://lrouviere.github.io/fiche1.nb.html)
-- [Fiche 2](https://lrouviere.github.io/fiche2_cor.html)
+- [Fiche 1](fiche1.nb.html)
+- [Fiche 2](fiche2_cor.html)
 
 
 <!---
