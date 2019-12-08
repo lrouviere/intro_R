@@ -22,6 +22,9 @@
 - [Fiche 1](fiche1.nb.html)
 - [Fiche 2](fiche2_cor.html)
 - [Fiche 3](fiche3_cor.html)
+- [Fiche 4](fiche4_cor.html)
+- [Fiche 5](fiche5_cor.html)
+- [Fiche 6](fiche6_cor.html)
 
 
 <!---
