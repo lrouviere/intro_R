@@ -22,6 +22,10 @@
 - [Fiche 7](fiche7.nb.html) : Importation de tables SAS sur R
 
 
+---
+
+- Fiche stat, [Rmd](fiche_estimation_std.Rmd), [html](fiche_estimation_std.nb.html)
+
 ### Corrections
 
 - [Fiche 1](fiche1.nb.html)
