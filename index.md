@@ -20,10 +20,6 @@
 - [Fiche 5](fiche5_stu.Rmd) : Introduction aux cartes leaflet.
 - Fiche 6 : Régression avec R, [Rmd](fiche6_stu.Rmd), [html](fiche6_stu.nb.html)
 - [Fiche 7](fiche7.nb.html) : Importation de tables SAS sur R
-
-
----
-
 - Fiche stat, [Rmd](fiche_estimation_std.Rmd), [html](fiche_estimation_std.nb.html)
 
 ### Corrections
