@@ -30,6 +30,7 @@
 - [Fiche 4](fiche4_cor.html)
 - [Fiche 5](fiche5_cor.html)
 - [Fiche 6](fiche6_cor.html)
+- [Fiche stat](fiche_estimation.html)
 
 
 <!---
