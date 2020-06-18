@@ -1,3 +1,12 @@
+Ce cours présente une introduction au logiciel R. Les thèmes suivants sont abordés :
+
+- **Présentation du logiciel**, environnement `Rstudio`, reporting avec `Rmarkdown`   
+- **Objets R**
+- **Manipulation des données** (essentiellement avec `dplyr`)
+- **Visualisation de données** (représentations standards et avec `ggplot2`)
+- **Cartes dynamiques** avec `leaflet`
+- **Régression** : ajustement de modèles, formules, prévisions...
+
 
 ### Documents de cours
 
