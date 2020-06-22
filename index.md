@@ -12,7 +12,27 @@ Ce cours présente une introduction au logiciel R. Les thèmes suivants sont abo
 
 - [slides](pres_R.pdf)
 - [slides au format rapport](pres_R_article1.pdf)
+- [tutotiel avec exercices](https://lrouviere.github.io/TUTO_R/)
 
+
+### Jeux de données
+
+- Manipulation de données
+  - [mydata.csv](mydata.csv)
+  - [mydata2.csv](mydata2.csv)
+  - [piscines.csv](piscines.csv)
+  
+- Visualisation 
+  - [ozone.txt](ozone.txt)
+  - [taches_solaires.csv](taches_solaires.csv)
+  - [FrenchOpen-men-2013.csv](FrenchOpen-men-2013.csv)
+  - [Wimbledon-men-2013.csv](Wimbledon-men-2013.csv)
+  
+- Cartes leaflet
+  - [sta.Paris.csv](sta.Paris.csv)
+
+
+<!---
 ---
 
 - [slides, partie stat](cours_stat_ens.pdf)
@@ -41,7 +61,7 @@ Ce cours présente une introduction au logiciel R. Les thèmes suivants sont abo
 - [Fiche 6](fiche6_cor.html)
 - [Fiche stat](fiche_estimation.html)
 
-
+--->
 <!---
 - [Fiche 1](https://lrouviere.github.io/fiche1.nb.html)
 - [Fiche 2](https://lrouviere.github.io/fiche2_cor.html)
@@ -53,17 +73,4 @@ Ce cours présente une introduction au logiciel R. Les thèmes suivants sont abo
 
 
 
-### Jeux de données
-
-- Fiche 3
-  - [mydata.csv](mydata.csv)
-  - [mydata2.csv](mydata2.csv)
-  - [piscines.csv](piscines.csv)
-  
-- Fiche 4
-  - [ozone.txt](ozone.txt)
-  - [taches_solaires.csv](taches_solaires.csv)
-  
-- Fiche 7
-  - [panne.sas7bdat](panne.sas7bdat)
 
