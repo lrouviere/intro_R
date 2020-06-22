@@ -21,6 +21,7 @@ Ce cours présente une introduction au logiciel R. Les thèmes suivants sont abo
   - [mydata.csv](mydata.csv)
   - [mydata2.csv](mydata2.csv)
   - [piscines.csv](piscines.csv)
+  - [tauxchomage.csv](tauxchomage.csv)
   
 - Visualisation 
   - [ozone.txt](ozone.txt)
