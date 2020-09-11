@@ -11,8 +11,10 @@ Ce cours présente une introduction au logiciel R. Les thèmes suivants sont abo
 
 ### Documents de cours
 
-- [slides](pres_R.pdf)
-- [slides au format rapport](pres_R_article1.pdf)
+- [slides partie R](pres_R.pdf)
+- [slides partie R au format rapport](pres_R_article1.pdf)
+- [slides partie stat](cours_stat_ens.pdf)
+- [slides partie stat au format rapport](cours_article_ens.pdf)
 - [tutoriel avec exercices (non corrigés)](https://lrouviere.github.io/TUTO_R/)
 - [tutoriel avec exercices ( corrigés)](https://lrouviere.github.io/TUTO_R/correction/)
 
