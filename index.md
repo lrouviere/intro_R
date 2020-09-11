@@ -6,13 +6,15 @@ Ce cours présente une introduction au logiciel R. Les thèmes suivants sont abo
 - **Visualisation de données** (représentations standards et avec `ggplot2`)
 - **Cartes dynamiques** avec `leaflet`
 - **Régression** : ajustement de modèles, formules, prévisions...
+- **Introduction au problème de l'estimation**, lois de probabilités, notions d'estimateurs, performance d'estimateurs, intervalles de confiance.
 
 
 ### Documents de cours
 
 - [slides](pres_R.pdf)
 - [slides au format rapport](pres_R_article1.pdf)
-- [tutotiel avec exercices](https://lrouviere.github.io/TUTO_R/)
+- [tutoriel avec exercices (non corrigés)](https://lrouviere.github.io/TUTO_R/)
+- [tutoriel avec exercices ( corrigés)](https://lrouviere.github.io/TUTO_R/correction/)
 
 
 ### Jeux de données
