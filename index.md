@@ -36,9 +36,10 @@ Ce cours présente une introduction au logiciel R. Les thèmes suivants sont abo
 - Cartes leaflet
   - [sta.Paris.csv](sta.Paris.csv)
 
-- Devoir 2 décembre
-  - [sujet]()
-  - [data_covid_2020.csv](data_covid_2020.csv)
+### Devoir 2 décembre
+
+- [sujet]()
+- [data_covid_2020.csv](data_covid_2020.csv)
   
 
 
