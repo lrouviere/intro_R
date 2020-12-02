@@ -42,7 +42,6 @@ Ce cours présente une introduction au logiciel R. Les thèmes suivants sont abo
 - [data_covid_2020.csv](data_covid_2020.csv)
   
 
-
 <!---
 ---
 
