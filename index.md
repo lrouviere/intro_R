@@ -38,9 +38,9 @@ Ce cours présente une introduction au logiciel R. Les thèmes suivants sont abo
 
 ### Devoir 2 décembre
 
-- [sujet](decembre_2020.pdf)
+- [sujet](decembre_2020_sujet.pdf)
 - [data_covid_2020.csv](data_covid_2020.csv)
-  
+- [corrigé](decembre_2020_corrige.pdf)
 
 <!---
 ---
