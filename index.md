@@ -47,7 +47,7 @@ Ce cours présente une introduction au logiciel R. Les thèmes suivants sont abo
 
 - [slides, partie stat](cours_stat_ens.pdf)
 - [slides au format rapport, partie stat](cours_article_ens.pdf)
-
+-
 
 ### Exercices, notebook
 
